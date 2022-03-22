@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGO_URI,
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
 
- 
+app.use(express.urlencoded({ extended: true }));
 
 // Express session
 app.use(
